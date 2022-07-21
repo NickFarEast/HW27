@@ -36,7 +36,7 @@ class AdView(View):
     def post(self, request):
         ad_data = json.loads(request.body)
 
-        ad = Ad.objects.ctreate(
+        ad = Ad.objects.create(
             name=ad_data["name"],
             author=ad_data["author"],
             price=ad_data["price"],
@@ -89,7 +89,7 @@ class CategoryView(View):
     def post(self, request):
         category_data = json.loads(request.body)
 
-        category = Category.objects.ctreate(
+        category = Category.objects.create(
             name=category_data["name"]
         )
 
